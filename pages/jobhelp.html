@@ -1,0 +1,928 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JOBHELP</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				border:none;
+			}
+			div#motherfucker{
+				width: 100%;
+			}
+			div#header{
+				width: 100%;
+				height: 109px;
+				background: #fff;
+			}
+			div.header-a{
+				height: 109px;
+				position: absolute;
+				color: #606060;
+				line-height: 109px;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: tahoma;
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				cursor: pointer;
+				z-index:8;
+			}
+			div#header-a1{
+				width: 220px;
+				background:url('../img/header2.png') -75px 0px;
+				left: 75px;
+			}
+			div#header-a2{
+				width: 100px;
+				right: 350px;
+			}
+			div#header-a3{
+				width: 100px;
+				right: 220px;
+			}
+			div#header-a3 > span:first-of-type{
+				width: 90px;
+				position: absolute;
+				left: 0;
+			}
+			div#header-a3 > span:last-of-type{
+				width: 5px;
+				height: 5px;
+				position: absolute;
+				right: 0;
+				top: 50px;
+				border-top: 1px solid #606060;
+				border-right: 1px solid #606060;
+				transform: rotate(135deg);
+			}
+			div#header-a4{
+				width: 67px;
+				right: 100px;
+				overflow: hidden;
+			}
+			div#header-a4 > span:first-of-type{
+				width: 50px;
+				position: absolute;
+				left: 0;
+			}
+			div#header-a4 > span:last-of-type{
+				width: 5px;
+				height: 5px;
+				position: absolute;
+				right: 5px;
+				top: 50px;
+				border-top: 1px solid #606060;
+				border-right: 1px solid #606060;
+				transform: rotate(135deg);
+			}
+			div.header-a:hover{
+				color: #337ab7;
+			}
+			div#header-a3:hover > span:last-of-type{
+				border-top: 1px solid #337ab7;
+				border-right: 1px solid #337ab7;
+			}
+			div#header-a4:hover > span:last-of-type{
+				border-top: 1px solid #337ab7;
+				border-right: 1px solid #337ab7;
+			}
+			div.header-submenu-container{
+				width:202px;
+				height: 20px;
+				position: relative;
+				transition: all 0.5s ease;
+				margin-left: -130px;
+			}
+			div.header-submenu-top{
+				width: 40px;
+				height:109px;
+				position: relative;
+			}
+			ul.header-submenu{
+				width:220px;
+				height:auto;
+				position: relative;
+				transition: all 0.7s ease;
+				transform-origin: 0 0 0;
+				list-style:none;
+				transform:scaleY(0);
+			}
+			ul.header-submenu > li{
+				width:175px;
+				height:30px;
+				background: #fff;
+				color: #2D3E50;
+				margin-left:0;
+				padding-left:15px;
+				font-size: 14px;
+				font-weight: 100;
+				font-family: tahoma;
+				letter-spacing: 1px;
+				line-height:30px;
+				text-transform: uppercase;
+				overflow: hidden;
+			}
+			ul.header-submenu li:first-of-type{
+				padding-top: 10px;
+			}
+			ul.header-submenu li:last-of-type{
+				padding-bottom: 10px;
+			}
+			p.font1{
+				text-align: left;
+				margin-left: 10px;
+				transition: all 0.3s ease;
+			}
+			div#header-a4:hover{
+				overflow: visible;
+			}
+			div#header-a4:hover ul.header-submenu{
+				transform:scaleY(1);
+			}
+			ul.header-submenu li:hover{
+				color: #337ab7;
+			}
+			div#header3-submenu-container{
+				width:100px;
+				height: 30px;
+				margin-left: 0;
+			}
+			ul#header3-submenu{
+				width: 750px;
+				height: 240px;
+				position: relative;
+				background: #fff;
+				left: -535px;
+			}
+			ul#header3-submenu li:first-of-type{
+				padding-top: 0;
+			}
+			ul#header3-submenu li:last-of-type{
+				padding-bottom: 0;
+			}
+			ul#header3-submenu > li{
+				width:150px;
+				height:200px;
+				position: relative;
+				padding: 0;
+				margin: 20px 20px 20px 10px;
+				display: inline-block;
+				overflow: hidden;
+			}
+			ul.header-sub-submenu{
+				width:150px;
+				height:198px;
+				padding-top: 5px;
+			}
+			ul.header-sub-submenu > li{
+				width:140px;
+				height:20px;
+				margin: 5px;
+				background: #fff;
+				color: #606060;
+				font-family: tahoma;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: left;
+				text-transform: capitalize;
+				padding-left: 10px;
+				font-weight: 100;
+			}
+			ul.header-sub-submenu > li:first-of-type{
+				padding: 40px 0 40px 10px;
+				line-height: 45px;
+				font-weight: 700;
+			}
+			span.header-sub-submenu-first{
+				text-decoration: underline;
+			}
+			div#header-a3:hover{
+				overflow: visible;
+			}
+			div#header-a3:hover ul.header-submenu{
+				transform:scaleY(1);
+			}
+			ul#header3-submenu li:hover{
+				color: #337ab7;
+			}
+			div#main{
+				width: 100%;
+				position: relative;
+				min-height: 534px;
+				background: #f8f8f8;
+			}
+			div#main1{
+				width: 300px;
+				height: 100px;
+				position: relative;
+				padding-top: 125px;
+				margin: 0 auto;
+				color: #303030;
+				font-size: 50px;
+				font-weight: 600;
+				text-transform: uppercase;
+				font-family: tahoma;
+				text-align: center;
+				line-height: 100px;
+				letter-spacing: 2px;
+				display: block;
+			}
+			div#main2{
+				width: 750px;
+				height: 33px;
+				position: relative;
+				padding-top: 10px;
+				margin: 0 auto;
+				color: #303030;
+				font-size: 30px;
+				font-weight: 400;
+				font-family: tahoma;
+				text-align: center;
+				line-height: 33px;
+				letter-spacing: 2px;
+			}
+			ul#main3{
+				width: 724px;
+				height: 30px;
+				line-height: 30px;
+				position: relative;
+				padding-top: 20px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			ul#main3 li{
+				width: auto;
+				height: 30px;
+				padding-left: 7px;
+				padding-right: 7px;
+				margin-left: 3px;
+				line-height: 30px;
+				border-radius: 3px;
+				color: #303030;
+				font-family: Tahoma;
+				font-size: 14px;
+				display: inline-block;
+				list-style: none;
+			}
+			li.main32{
+				color: #F05A66 !important;
+			}
+			div#main4{
+				width: 350px;
+				height: 42px;
+				position: relative;
+				margin: 25px auto;
+			}
+			div#main4 span{
+				transition: all 0.3s ease;
+			}
+			div#main4 span:hover{
+				background: #14B1BB;
+				color: #fff;
+			}
+			span.box-main4{
+				width: 160px;
+				height: 42px;
+				margin-left: 7px;
+				margin-right:0;
+				background: #303030;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 500;
+				font-family: tahoma;
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				line-height: 42px;
+				display: inline-block;
+				cursor: pointer;
+			}
+			div#content{
+				width: 100%;
+				background: #fff;
+			}
+			div.choose{
+				width: 400px;
+				height: 22px;
+				position: relative;
+				padding-top: 100px;
+				padding-bottom: 20px;
+				margin: 0 auto;
+				color: #2d3e50;
+				font-size: 30px;
+				font-weight: 700;
+				font-family: tahoma;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 22px;
+			}
+			div.line1{
+				width: 70px;
+				height: 5px;
+				position: relative;
+				margin: 10px auto 0;
+				text-align: center;
+				border-top: 1px solid #dddddd;
+			}
+			div#content-menu-box{
+				width: 420px;
+				height: 40px;
+				position: relative;
+				margin: 20px auto;
+			}
+			ul.content-menu li{
+				width: auto;
+				height: 40px;
+				margin: 0 0 0 15px;
+				padding: 0 25px;
+				line-height: 40px;
+				border-radius: 2px;
+				background: #eee;
+				color: #202020;
+				font-family: Tahoma;
+				font-size: inherit;
+				display: inline-block;
+				list-style: none;
+				transition:all 0.3s ease;
+				cursor: pointer;
+			}
+			ul.content-menu li:hover{
+				background: #14B1BB;
+				color: #fff;
+				box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			}
+			li#content-menu-all{
+				background: #14B1BB;
+				color: #fff;
+				box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			}
+			div.wrapper{
+				width: 100%;
+				height: auto;
+				background: #fff;
+				position: relative;
+				margin : 40px auto;
+			}
+			div.wrapper div{
+				width:310px;
+				height:300px;
+				margin:13px 33px;
+				background:#fff;
+				border-radius:3px;
+				transition:all 0.3s ease;
+				box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 3px 3px 3px 3px rgba(0, 0, 0, 0.06);
+				display: inline-block;
+				cursor:pointer;
+			}
+			div.wrapper div:hover{
+				box-shadow: 1px 20px 10px 3px rgba(0, 0, 0, 0.12);
+			}
+			div.wrapper div div:first-of-type{
+				width: 290px;
+				height: 214.8px;
+				margin: 10px;
+				position: relative;
+				box-shadow: none;
+			}
+			div.wrapper div div:last-of-type{
+				width: 300px;
+				height: 40px;
+				margin: 10px 5px 0 5px;
+				position: relative;
+				box-shadow: none;
+				color: #2d3e50;
+				font-size: 14px;
+				font-weight: 300;
+				font-family: tahoma;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 40px;
+				letter-spacing: 1px;
+			}
+			div#home-1{
+				background: url('../img/home-1.jpg');
+				background-size: cover;
+			}
+			div#home-2{
+				background: url('../img/home-2.jpg');
+				background-size: cover;
+			}
+			div#home-3{
+				background: url('../img/home-3.jpg');
+				background-size: cover;
+			}
+			div#home-4{
+				background: url('../img/home-4.jpg');
+				background-size: cover;
+			}
+			div#home-5{
+				background: url('../img/home-5.jpg');
+				background-size: cover;
+			}
+			div#home-6{
+				background: url('../img/home-6.jpg');
+				background-size: cover;
+			}
+			div#home-7{
+				background: url('../img/home-7.jpg');
+				background-size: cover;
+			}
+			div#home-8{
+				background: url('../img/home-8.jpg');
+				background-size: cover;
+			}
+			div#home-9{
+				background: url('../img/home-9.jpg');
+				background-size: cover;
+			}
+			div#home-10{
+				background: url('../img/home-10.jpg');
+				background-size: cover;
+			}
+			div#home-11{
+				background: url('../img/home-11.jpg');
+				background-size: cover;
+			}
+			div#home-12{
+				background: url('../img/home-12.jpg');
+				background-size: cover;
+			}
+			div#home-13{
+				background: url('../img/home-13.jpg');
+				background-size: cover;
+			}
+			div#home-14{
+				background: url('../img/home-14.jpg');
+				background-size: cover;
+			}
+			div#home-15{
+				background: url('../img/home-15.jpg');
+				background-size: cover;
+			}
+			div#home-16{
+				background: url('../img/home-16.jpg');
+				background-size: cover;
+			}
+			div#home-17{
+				background: url('../img/home-17.jpg');
+				background-size: cover;
+			}
+			div#home-18{
+				background: url('../img/home-18.jpg');
+				background-size: cover;
+			}
+			div#home-19{
+				background: url('../img/home-19.jpg');
+				background-size: cover;
+			}
+			div#home-20{
+				background: url('../img/home-20.jpg');
+				background-size: cover;
+			}
+			div#content2{
+				width: 100%;
+				height: auto;
+				background: #f8f8f8;
+				position: relative;
+				padding-bottom: 100px;
+			}
+			div#content2-text{
+				width: 600px;
+				height: 10px;
+				position: relative;
+				padding-top: 0;
+				padding-bottom: 10px;
+				margin: 0 auto;
+				color: #2d3e50;
+				font-size: 16px;
+				font-weight: 500;
+				font-family: tahoma;
+				text-align: center;
+				line-height: 10px;
+			}
+			div.wrapper2{
+				width: 85%;
+				height: auto;
+				position: relative;
+				margin : 20px auto;
+			}
+			div.wrapper2 div{
+				width:260px;
+				height:85px;
+				margin:10px 26.5px;
+				background: #f8f8f8;
+				color: #606060;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				font-family: tahoma;
+				text-align: center;
+				line-height: 84.5px;
+				text-transform: capitalize;
+				border: 1px solid #e5e5e5;
+				border-radius:3px;
+				transition:all 0.3s ease;
+				display: inline-block;
+				cursor:pointer;
+			}
+			div.wrapper2 div:hover{
+				color: #fff;
+				background: #14B1BB;
+			}
+			div#content3{
+				width: 100%;
+				height: auto;
+				background: #fff;
+				position: relative;
+			}
+			div.wrapper3{
+				width: 85%;
+				height: auto;
+				position: relative;
+				margin : 20px auto;
+				padding-bottom: 50px;
+			}
+			div.wrapper3 div{
+				width:385px;
+				height:36px;
+				position: relative;
+				transition:all 0.3s ease;
+				display: inline-block;
+				margin: 3px;
+				cursor:pointer;
+			}
+			div.wrapper3 div div:first-of-type{
+				width:26px;
+				height:26px;
+				top: 5px;
+				position: relative;
+				background: url('../img/arrow.png');
+				background-size: cover;
+			}
+			div.wrapper3 div div:last-of-type{
+				width:340px;
+				height:36px;
+				position: relative;
+				color: #606060;
+				font-size: 16px;
+				font-weight: 300;
+				letter-spacing: 0px;
+				font-family: tahoma;
+				line-height: 36px;
+				text-transform: uppercase;
+			}
+			div#footer{
+				width: 100%;
+				height: 100px;
+				position: relative;
+				background: #f8f8f8;
+				color: #606060;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 300;
+				letter-spacing: 1px;
+				font-family: tahoma;
+				line-height: 100px;
+			}
+			span#footer-item{
+				color: #14B1BB;
+				cursor: pointer;
+			}
+			span#footer-item:hover{
+				color: #606060;
+			}
+			div#home-button{
+				width:50px;
+				height: 50px;
+				position: fixed;
+				right: 2%;
+				top: 89%;
+				background: #14B1BB;
+				z-index: 133;
+				cursor: pointer;
+			}
+			div#home-button-arrow{
+				width: 10px;
+				height: 10px;
+				position: relative;
+				margin: 20px auto;
+				border-top: 4px solid #fff;
+				border-right: 4px solid #fff;
+				transform: rotate(-45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="motherfucker">
+			<div id="header">
+				<div class="header-a" id="header-a1"></div>
+				<div class="header-a" id="header-a2">feature</div>
+				<div class="header-a" id="header-a3"><span>shortcode</span><span></span>
+					<div class="header-submenu-container" id="header3-submenu-container">
+						<div class="header-submenu-top"></div>
+						<ul class="header-submenu" id="header3-submenu">
+							<li>
+								<ul class="header-sub-submenu">
+									<li><span class="header-sub-submenu-first">sho</span><span>rtcode list</span></li>
+									<li>job posts</li>
+									<li>Candidates</li>
+									<li>Advertise</li>
+									<li>blog</li>
+									<li>testimonial</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="header-sub-submenu">
+									<li><span class="header-sub-submenu-first">sho</span><span>rtcode list</span></li>
+									<li>contact form</li>
+									<li>map</li>
+									<li>fun fact</li>
+									<li>image gallery</li>
+									<li>video gallery</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="header-sub-submenu">
+									<li><span class="header-sub-submenu-first">sho</span><span>rtcode list</span></li>
+									<li>address</li>
+									<li>alerts</li>
+									<li>buttons</li>
+									<li>breadcrumbs</li>
+									<li>pagination</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="header-sub-submenu">
+									<li><span class="header-sub-submenu-first">sho</span><span>rtcode list</span></li>
+									<li>progressbar</li>
+									<li>text animation 1</li>
+									<li>text animation 2</li>
+									<li>text animation 3</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-a" id="header-a4"><span>pages</span><span></span>
+					<div class="header-submenu-container">
+						<div class="header-submenu-top"></div>
+						<ul class="header-submenu">
+							<li><p class="font1">job board</p></li>
+							<li><p class="font1">Single Job</p></li>
+							<li><p class="font1">job details</p></li>
+							<li><p class="font1">candidates</p></li>
+							<li><p class="font1">resume</p></li>
+							<li><p class="font1">blog page</p></li>
+							<li><p class="font1">blog details</p></li>
+							<li><p class="font1">login page</p></li>
+							<li><p class="font1">login page two</p></li>
+							<li><p class="font1">contact</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div id="main1">jobhelp</div>
+				<div id="main2">Best Job Board Template For Your Organization</div>
+				<div>
+					<ul id="main3">
+						<li>60+ HTML PAGE</li>
+						<li class="main32">+</li>
+						<li>40+ SHORTCODE</li>
+						<li class="main32">+</li>
+						<li>AWSOME MEGAMENU</li>
+						<li class="main32">+</li>
+						<li>FULLY RESPONSIVE</li>
+					</ul>
+				</div>
+				<div id="main4">
+					<span class="box-main4">feature</span>
+					<span class="box-main4">view all demo</span>
+				</div>
+			</div>
+			<div id="home-button">
+				<a href="#"><div id="home-button-arrow"></div></a>
+			</div>
+			<div id="content">
+				<div class="choose">choose your demo</div>
+				<div class="line1"></div>
+				<div id="content-menu-box">
+					<ul class="content-menu">
+						<li id="content-menu-all">All</li>
+						<li>Home</li>
+						<li>Blog</li>
+						<li>Other</li>
+					</ul>
+				</div>
+				<div class="wrapper">
+					<div>
+						<div id="home-1"></div>
+						<div>slider style 1</div>
+					</div>
+					<div>
+						<div id="home-2"></div>
+						<div>slider style 2</div>
+					</div>
+					<div>
+						<div id="home-3"></div>
+						<div>image overlay light</div>
+					</div>
+					<div>
+						<div id="home-4"></div>
+						<div>image overlay dark</div>
+					</div>
+					<div>
+						<div id="home-5"></div>
+						<div>background image</div>
+					</div>
+					<div>
+						<div id="home-6"></div>
+						<div>menu with image 1</div>
+					</div>
+					<div>
+						<div id="home-7"></div>
+						<div>menu with image 2</div>
+					</div>
+					<div>
+						<div id="home-8"></div>
+						<div>video background</div>
+					</div>
+					<div>
+						<div id="home-9"></div>
+						<div>fixed background</div>
+					</div>
+					<div>
+						<div id="home-10"></div>
+						<div>box layout</div>
+					</div>
+					<div>
+						<div id="home-11"></div>
+						<div>job board</div>
+					</div>
+					<div>
+						<div id="home-12"></div>
+						<div>single job post</div>
+					</div>
+					<div>
+						<div id="home-13"></div>
+						<div>job details</div>
+					</div>
+					<div>
+						<div id="home-14"></div>
+						<div>resume</div>
+					</div>
+					<div>
+						<div id="home-15"></div>
+						<div>candidates</div>
+					</div>
+					<div>
+						<div id="home-16"></div>
+						<div>login</div>
+					</div>
+					<div>
+						<a href="login.html">
+							<div id="home-17"></div>
+							<div>login two</div>
+						</a>
+					</div>
+					<div>
+						<div id="home-18"></div>
+						<div>blog</div>
+					</div>
+					<div>
+						<div id="home-19"></div>
+						<div>blog details</div>
+					</div>
+					<div>
+						<a href="contact1.html">
+							<div id="home-20"></div>
+							<div>contact</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="content2">
+				<div class="choose">available shortcodes</div>
+				<div id="content2-text">There are so many reasons to choose jobhelp, here are a few items:</div>
+				<div class="line1"></div>
+				<div class="wrapper2">
+					<div>Alert</div>
+					<div>Breadcrumb</div>
+					<div>Buttons</div>
+					<div>Contact Form</div>
+					<div>Image Gallery</div>
+					<div>Video Gallery</div>
+					<div>Map</div>
+					<div>default menu</div>
+					<div>menu top bar</div>
+					<div>menu center</div>
+					<div>menu transparent</div>
+					<div>menu white</div>
+					<div>menu border</div>
+					<div>menu sticky</div>
+					<div>menu non sticky</div>
+					<div>title center</div>
+					<div>title left</div>
+					<div>title right</div>
+					<div>title dark</div>
+					<div>title fixed</div>
+					<div>pagination</div>
+					<div>progressbar</div>
+					<div>slide 1</div>
+					<div>slide 2</div>
+					<div>video background</div>
+					<div>image background</div>
+					<div>fixed background</div>
+					<div>text animation 1</div>
+					<div>text animation 2</div>
+					<div>text animation 3</div>
+					<div>address</div>
+					<div>advertise</div>
+					<div>candidates</div>
+					<div>fun fact</div>
+					<div>job post</div>
+					<div>blog</div>
+					<div>testimonial</div>
+					<div>footer style 1</div>
+					<div>footer style 2</div>
+					<div>footer style 3</div>
+					<div>footer style 4</div>
+				</div>
+			</div>
+			<div id="content3">
+				<div class="choose">jobhelpe feature</div>
+				<div id="content2-text">There are so many reasons to choose jobhelpe, here are a few items:</div>
+				<div class="line1"></div>
+				<div class="wrapper3">
+					<div>
+						<div></div>
+						<div>valid html5 & css3</div>
+					</div>
+					<div>
+						<div></div>
+						<div>neat, clean and sample design</div>
+					</div>
+					<div>
+						<div></div>
+						<div>creative and modern flat design</div>
+					</div>
+					<div>
+						<div></div>
+						<div>shortcode ready</div>
+					</div>
+					<div>
+						<div></div>
+						<div>total 60+ html pages</div>
+					</div>
+					<div>
+						<div></div>
+						<div>40+ shortcode pages element</div>
+					</div>
+					<div>
+						<div></div>
+						<div>amazing megamenu</div>
+					</div>
+					<div>
+						<div></div>
+						<div>built based on bootstrap v3.x</div>
+					</div>
+					<div>
+						<div></div>
+						<div>fully responsive</div>
+					</div>
+					<div>
+						<div></div>
+						<div>10 home pages style</div>
+					</div>
+					<div>
+						<div></div>
+						<div>cross browser optimization</div>
+					</div>
+					<div>
+						<div></div>
+						<div>well commented html & css files</div>
+					</div>
+					<div>
+						<div></div>
+						<div>google fonts & material icon font</div>
+					</div>
+					<div>
+						<div></div>
+						<div>awsome box layout</div>
+					</div>
+					<div>
+						<div></div>
+						<div>different color option</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<p>2017 &copy; All Rights Reserved - <span id="footer-item">Devitems</span> Responsive Template</p>
+			</div>
+		</div>
+	</body>
+</html>

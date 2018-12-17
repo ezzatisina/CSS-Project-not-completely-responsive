@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HOME</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				border:none;
+			}
+			div#header{
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				top: 0;
+				background: #243238;
+				box-shadow: 0 5px 10px rgba(36,50,56,0.25);
+				z-index:29999;
+			}
+			div.header-a{
+				height: 30px;
+				position: absolute;
+				margin-top: 15px;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			div#header-a1{
+				width: 255px;
+				background:url('img/header11.png') 0px -10px;
+				margin-left: 16px;
+				float: left;
+			}
+			div#header-a1:hover{
+				background:url('img/header11.png') 0px -61.5px;
+			}
+			div#header-a2{
+				width: 15px;
+				background:url('img/header11.png') -262px -10px;
+				margin-left: 301px;
+			}
+			div#header-a2:hover{
+				background:url('img/header11.png') -262px -61.5px;
+			}
+			div.pulldown-wrapper{
+				width: 200px;
+				height: 60px;
+				position: relative;
+				top: 60px;
+				left: 50%;
+				margin-left: -100px;
+				transform: scale(0.6);
+				transition: all 0.4s ease;
+			}
+			div.pulldown{
+				width: auto;
+				height: 40px;
+				position: relative;
+				background: #455a64;
+				color: #b0bec5;
+				top: 20px;
+				font-family: arial;
+				font-size: 15px;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 4px;
+				z-index:2;
+			}
+			div.pulldown-top{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 15px;
+				left: 50%;
+				margin-left: -10px;
+				background: #455a64;
+				transform: rotate(45deg);
+				z-index: 1;
+			}
+			div#header-a3{
+				width: 15px;
+				background:url('img/header11.png') -471px -10px;
+				right: 950px;
+			}
+			div#header-a3:hover{
+				background:url('img/header11.png') -471px -61.5px;
+			}
+			div#pulldown-wrapper3{
+				width: 70px;
+				margin-left: -35px;
+			}
+			div#header-a4{
+				width: 20px;
+				background:url('img/header11.png') -498px -10px;
+				right: 910px;
+			}
+			div#header-a4:hover{
+				background:url('img/header11.png') -498px -61.5px;
+			}
+			div#pulldown-wrapper4{
+				width: 70px;
+				margin-left: -35px;
+			}
+			div#header-a5{
+				width: 22px;
+				background:url('img/header11.png') -530px -10px;
+				right: 870px;
+			}
+			div#header-a5:hover{
+				background:url('img/header11.png') -530px -61.5px;
+			}
+			div#pulldown-wrapper5{
+				width: 80px;
+				margin-left: -40px;
+			}
+			div#header-a6{
+				width: 225px;
+				height: 40px;
+				margin-top: 10px;
+				background:url('img/header11.png') -555px -10px;
+				right: 620px;
+			}
+			div#header-a6:hover{
+				background:url('img/header11.png') -555px -61.5px;
+			}
+			div#header-a7{
+				width: 200px;
+				height: 40px;
+				margin-top: 10px;
+				background:url('img/header11.png') -780px -10px;
+				right: 420px;
+			}
+			div#header-a7:hover{
+				background:url('img/header11.png') -780px -61.5px;
+			}
+			div#header-a8{
+				width: 70px;
+				background:url('img/header11.png') -996px -10px;
+				right: 290px;
+			}
+			div#pulldown-wrapper8{
+				width: 150px;
+				margin-left: -75px;
+			}
+			div#header-a9{
+				width: 155px;
+				right: 130px;
+				margin-top: 10px;
+			}
+			span#a9-1{
+				width: 130px;
+				height: 40px;
+				position: absolute;
+				left: 0;
+				color: #b0bec5;
+				font-size: 16px;
+				line-height: 40px;
+				padding-left: 20px;
+			}
+			span.arrow-container{
+				width: 25px;
+				height: 60px;
+				position: absolute;
+				right: 0;
+			}
+			div#header-a9:hover div#a9-2{
+				border-top: 1px solid #2196f3;
+				border-left: 1px solid #2196f3;
+			}
+			div#header-a10{
+				width: 25px;
+				background:url('img/header11.png') -1265px -10px;
+				right: 80px;
+			}
+			div#header-a10:hover{
+				background:url('img/header11.png') -1265px -61.5px;
+			}
+			div#pulldown-wrapper10{
+				width: 150px;
+				margin-left: -75px;
+			}
+			div#header-a11{
+				width: 25px;
+				right: 30px;
+				top: -10px;
+			}
+			div#pulldown-wrapper11{
+				width: 200px;
+				height: 60px;
+				position: absolute;
+				top: -8px;
+				margin-left: -220px;
+				transform: scalex(0.6);
+				transition: all 0.4s ease;
+			}
+			div#pulldown11{
+				width: auto;
+				height: 40px;
+				position: relative;
+				background: #455a64;
+				color: #b0bec5;
+				top: 20px;
+				font-family: arial;
+				font-size: 15px;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 4px;
+				z-index:2;
+			}
+			div#pulldown-top11{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 50%;
+				right: -8px;
+				background: #455a64;
+				transform: rotate(45deg);
+				z-index: 1;
+			}
+			div#header-a11:hover div#pulldown-wrapper11{
+				transform:scalex(1);
+			}
+			div.arrow{
+				width: 6px;
+				height: 6px;
+				position: relative;
+				margin: 26px auto;
+				border-top: 1px solid #b0bec5;
+				border-left: 1px solid #b0bec5;
+				transform: rotate(45deg);
+			}
+			div.arrow2{
+				width: 6px;
+				height: 6px;
+				position: relative;
+				margin: 17px auto;
+				border-top: 1px solid #b0bec5;
+				border-left: 1px solid #b0bec5;
+				transform: rotate(-135deg);
+			}
+			div#header-a11:hover div.arrow{
+				border-top: 1px solid #2196f3;
+				border-left: 1px solid #2196f3;
+			}
+			div.header-a:hover{
+				overflow: visible;
+			}
+			div.header-a:hover div.pulldown-wrapper{
+				transform:scale(1);
+			}
+			#iframe1{
+				position: fixed;
+				width: 100%;
+				height: 91%;
+				top: 60px;
+				z-index: 1;
+			}
+			a#underline{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="header-a" id="header-a1"></div>
+			<div class="header-a" id="header-a2">
+				<a id="underline" href="pages/jobhelp.html"><div class="pulldown-wrapper">
+					<div class="pulldown">Preview without toolbar</div>
+					<div class="pulldown-top"></div>
+				</div></a>
+			</div>
+			<div class="header-a" id="header-a3">
+				<div class="pulldown-wrapper" id="pulldown-wrapper3">
+					<div class="pulldown">Mobile</div>
+					<div class="pulldown-top"></div>
+				</div>
+			</div>
+			<div class="header-a" id="header-a4">
+				<div class="pulldown-wrapper" id="pulldown-wrapper4">
+					<div class="pulldown">Tablet</div>
+					<div class="pulldown-top"></div>
+				</div>
+			</div>
+			<div class="header-a" id="header-a5">
+				<div class="pulldown-wrapper" id="pulldown-wrapper5">
+					<div class="pulldown">Desktop</div>
+					<div class="pulldown-top"></div>
+				</div>
+			</div>
+			<div class="header-a" id="header-a6"></div>
+			<div class="header-a" id="header-a7"></div>
+			<div class="header-a" id="header-a8">
+				<div class="pulldown-wrapper" id="pulldown-wrapper8">
+					<div class="pulldown">Choose the Licence</div>
+					<div class="pulldown-top"></div>
+				</div>
+			</div>
+			<div class="header-a" id="header-a9">
+				<span id="a9-1">Popular services</span><span class="arrow-container">
+					<div class="arrow2" id="a9-2"></div>
+				</span>
+			</div>
+			<div class="header-a" id="header-a10">
+				<div class="pulldown-wrapper" id="pulldown-wrapper10">
+					<div class="pulldown">Add to Collection</div>
+					<div class="pulldown-top"></div>
+				</div>
+			</div>
+			<div class="header-a" id="header-a11">
+				<div class="arrow"></div>
+				<div id="pulldown-wrapper11">
+					<div id="pulldown11">Choose the Licence</div>
+					<div id="pulldown-top11"></div>
+				</div>
+			</div>
+		</div>
+			<iframe id="iframe1" src="pages/jobhelp.html" scrolling="yes" ></iframe>
+	</body>
+</html>

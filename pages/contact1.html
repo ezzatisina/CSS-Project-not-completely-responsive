@@ -1,0 +1,752 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contact || JobHelp</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				border:none;
+			}
+			div#motherfucker{
+				width: 100%;
+			}
+			div.header{
+				width: 100%;
+				height: 109px;
+				position: fixed;
+				margin: 0 auto;
+				top: 0;
+				background: #fff;
+				opacity: 0.8;
+				z-index: 66;
+			}
+			div.header-fake{
+				width: 100%;
+				height: 109px;
+				position: fixed;
+				top: 0;
+				z-index: 66;
+			}
+			div#header-logo{
+				width: 192px;
+				height: 35px;
+				position: absolute;
+				margin: 31px 75px;
+				background:url('../img/logo.png');
+				background-size: cover;
+				opacity: 1 !important;
+			}
+			ul.header-wrapper{
+				width: 800px;
+				height: 39px;
+				position: absolute;
+				margin: 35px 0 35px 108px;
+				right: 0;
+				opacity: 1;
+				list-style:none;
+			}
+			ul.header-wrapper li{
+				width:40px;
+				height:39px;
+				padding: 0 2px;
+				transition:all 0.3s ease;
+				color:#333;
+				margin:0 5px;
+				font-size: 14px;
+				font-weight: 400;
+				font-family: sans-serif;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 39px;
+				cursor:pointer;
+				float:left;
+				overflow: hidden;
+			}
+			ul.header-wrapper li#submenu2-width{
+				width: 85px;
+			}
+			ul.header-wrapper li#submenu3-width{
+				width: 75px;
+			}
+			ul.header-wrapper li#submenu4-width{
+				width: 60px;
+			}
+			ul.header-wrapper li#submenu5-width{
+				width: 90px;
+			}
+			ul.header-wrapper li#submenu6-width{
+				width: 40px;
+			}
+			ul.header-wrapper li#submenu7-width{
+				width: 40px;
+			}
+			ul.header-wrapper li#submenu8-width{
+				width: 70px;
+			}
+			div.header-submenu-container{
+				width:202px;
+				height:auto;
+				position: relative;
+				transition: all 0.5s ease;
+				margin-left: -20px;
+			}
+			div.header-submenu-top{
+				width: 50px;
+				height: 35px;
+				position: relative;
+			}
+			ul.header-submenu{
+				width:202px;
+				height:auto;
+				position: relative;
+				transition: all 0.3s ease;
+				list-style:none;
+				transform:scaleY(0);
+			}
+			ul.header-submenu li{
+				width:170px;
+				height:30px;
+				background: #fff;
+				transition: all 0.5s ease;
+				color: #2D3E50;
+				margin-left:0;
+				padding-right: 30px;
+				font-size: 12px;
+				font-weight: 400;
+				font-family: tahoma;
+				letter-spacing: 1px;
+				line-height:30px;
+				overflow: hidden;
+			}
+			span.w-span1{
+				width: 140px;
+				height: 30px;
+				position: absolute;
+				left: 0;
+			}
+			span.w-span2{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				right: 0;
+				z-index:14;
+			}
+			span.w-span2 div{
+				width: 4px;
+				height: 4px;
+				position: relative;
+				margin: 12px auto;
+				border-top: 1px solid #000;
+				border-left: 1px solid #000;
+				transform: rotate(135deg);
+			}
+			ul.header-submenu li:first-of-type{
+				border-top: 2px solid #4fc1f0;
+				padding-top: 10px;
+			}
+			ul.header-submenu li:last-of-type{
+				padding-bottom: 10px;
+			}
+			ul.header-sub-submenu{
+				width:180px;
+				height:auto;
+				position: relative;
+				transition: all 0.6s ease;
+				top: 0;
+				left: 200px;
+				list-style:none;
+				transform-origin: 0 0 0;
+				transform:scaleX(0);
+			}
+			ul.header-sub-submenu li{
+				width:180px;
+				height:30px;
+				color: #2D3E50;
+				margin-left:0;
+				padding-right: 30px;
+				font-size: 12px;
+				font-weight: 100;
+				font-family: tahoma;
+				letter-spacing: 1px;
+				line-height:30px;
+				transition: all 0.3s ease;
+			}
+			ul.header-sub-submenu li:first-of-type{
+				border: none;
+			}
+			p.font1{
+				text-align: left;
+				margin-left: 10px;
+				transition: all 0.3s ease;
+			}
+			p.font2{
+				text-align: left;
+				margin-left: 10px;
+				transition: all 0.3s ease;
+			}
+			ul.header-wrapper > li:hover{
+				overflow:visible;
+				color: #14b1bb;
+			}
+			ul.header-wrapper > li:hover ul.header-submenu{
+				transform:scaleY(1);
+			}
+			ul.header-submenu > li:hover p.font1{
+				color: #14b1bb;
+				margin-left: 20px;
+			}
+			ul.header-submenu > li:hover{
+				overflow:visible;
+				color: #14b1bb;
+			}
+			ul.header-submenu > li:hover ul.header-sub-submenu{
+				transform:scaleX(1);
+			}
+			ul.header-sub-submenu > li:hover p.font2{
+				overflow:visible;
+				color: #14b1bb;
+				margin-left: 20px;
+			}
+			li#login-button{
+				width: 80px;
+				height: 39px;
+				position: relative;
+				margin-left: 40px;
+				color: #fff;
+				background: #14b1bb;
+				border-radius: 5px;
+				text-align: center;
+				overflow: hidden;
+			}
+			div#login-cover{
+				width: 80px;
+				height:39px;
+				position: absolute;
+				margin-left: -82px;
+				margin-top: -39px;
+				background: rgba(0,0,0,0.2);
+				border-radius: 5px;
+				transition: all 0.5s ease;
+			}
+			li#login-button:hover div#login-cover{
+				margin-left: 0px;
+			}
+			div#content{
+				width: 100%;
+				height: 250px;
+				position: relative;
+				margin: 0 auto;
+				margin-top: 107px;
+				background: url('../img/contact.png');
+				background-position: center;
+			}
+			div#content-map{
+				width: 100%;
+				height: 603px;
+				position: relative;
+				margin: 0 auto;
+				background: url('../img/contact-map.png');
+				background-position: right;
+			}
+			div#form{
+				width: 80%;
+				height: 450px;
+				position: relative;
+				margin: 0 auto;
+				top: 385px;
+				background: #fff;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+				z-index: 64;
+			}
+			div.form-label{
+				width: auto;
+				height: 15px;
+				position: absolute;
+				left: 15%;
+				top: 10%;
+				color: #9a9a9a;
+				font-size: 17px;
+				font-weight: 400;
+				font-family: sans-serif;
+				line-height: 15px;
+				letter-spacing: 1px;
+			}
+			div#form-label-2{
+				left: 55%;
+			}
+			div#form-label-3{
+				top: 30%;
+			}
+			.form-input{
+				width: 35%;
+				height: 45px;
+				position: absolute;
+				left: 13%;
+				top: 17%;
+				padding-left: 25px;
+				background: #f1f1f1;
+				color: #b8b8b8;
+				font-size: 14px;
+				font-weight: 500;
+				font-family: sans-serif;
+				line-height: 15px;
+				letter-spacing: 1px;
+				outline: none;
+			}
+			input#form-input-2{
+				left: 53%;
+			}
+			textarea#form-input-3{
+				width: 75%;
+				height: 30%;
+				top: 37%;
+				padding-top: 18px;
+			}
+			div#submit{
+				width: 150px;
+				height: 45px;
+				position: absolute;
+				left: 13%;
+				top: 80%;
+				background: #14b1bb;
+				color: #fff;
+				text-align:center;
+				font-size: 18px;
+				font-weight: 700;
+				font-family: sans-serif;
+				line-height: 45px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				cursor: pointer;
+				overflow: hidden;
+			}
+			div#submit-cover{
+				width: 150px;
+				height: 45px;
+				position: absolute;
+				margin-top: -45px;
+				margin-left: -150px;
+				background: rgba(0,0,0,0.2);
+				transition: all 0.5s ease;
+			}
+			div#submit:hover div#submit-cover{
+				margin-left: 0;
+			}
+			div.address-wrapper{
+				width: 950px;
+				height: 700px;
+				position: relative;
+				margin: 0 auto;
+			}
+			div.address-wrapper div{
+				width:250px;
+				height:200px;
+				margin: 400px 10px 100px 10px;
+				display: inline-block;
+			}
+			div.address-wrapper div div:first-of-type{
+				width: 330px;
+				height: 100px;
+				position: absolute;
+				margin: 0;
+				background: url('../img/contact-address.png') 75px 0;
+			}
+			div.address-wrapper div div:last-of-type{
+				width: 330px;
+				height: 100px;
+				position: absolute;
+				margin: 100px 0 0 0;
+				color: #4c4c4c;
+				text-align: center;
+				font-size: 20px;
+				font-weight: 500;
+				font-family: sans-serif;
+				line-height: 40px;
+			}
+			div#contact-address-2{
+				background: url('../img/contact-address.png') -300px 0;
+			}
+			div#contact-address-3{
+				background: url('../img/contact-address.png') -680px 0;
+			}
+			div#footer-header{
+				width: 100%;
+				height: 150px;
+				position: relative;
+				background: #2D3E50;
+			}
+			div#footer-header-1{
+				width: 320px;
+				height: 90px;
+				position: absolute;
+				margin-top: 30px;
+				margin-left: 80px;
+				background: url('../img/footer-header-1.png');
+				background-size: cover;
+			}
+			div.footer-header-2{
+				width: 350px;
+				height: 50px;
+				position: absolute;
+				margin-top: 50px;
+				right: 100px;
+			}
+			div.footer-header-2 div{
+				width: 40px;
+				height: 40px;
+				position: relative;
+				margin: 5px 10px;
+				background: url('../img/footer-header-2.png') -25px -22px;
+				display: inline-block;
+				cursor: pointer;
+			}
+			div#fh2-2{
+				background: url('../img/footer-header-2.png') -81px -22px;
+			}
+			div#fh2-3{
+				background: url('../img/footer-header-2.png') -137px -22px;
+			}
+			div#fh2-4{
+				background: url('../img/footer-header-2.png') -192px -22px;
+			}
+			div#fh2-5{
+				background: url('../img/footer-header-2.png') -248px -22px;
+			}
+			div.footer-content{
+				width: 100%;
+				height: auto;
+				position: relative;
+				background: #2C2C2C;
+			}
+			ul.menu{
+				list-style:none;
+				width:90%;
+				height:auto;
+				padding-top: 120px;
+				position:relative;
+				margin: 0 auto;
+			}
+			ul.menu > li{
+				width:240px;
+				height:auto;
+				position: relative;
+				line-height:100px;
+				color:#FFF;
+				margin:0 20px 0;
+				padding-left: 20px;
+				font-size: 24px;
+				font-weight: 400;
+				font-family: tahoma;
+				line-height: 100px;
+				letter-spacing: 1px;
+				float: left;
+			}
+			li#menu3{
+				width: 200px;
+			}
+			li#menu4{
+				width: 200px;
+			}
+			ul.submenu {
+				list-style:none;
+				width:260px;
+				height:250px;
+				position:relative;
+				display: inline-block;
+			}
+			ul.submenu > li{
+				width:260px;
+				height:30px;
+				color:#FFF;
+				margin-top:10px;
+				border-radius:10px;
+				margin-left:0;
+				font-size: 18px;
+				font-weight: 100;
+				font-family: tahoma;
+				letter-spacing: 1px;
+				line-height:50px;
+				transition: all 0.5s ease;
+			}
+			li#submenu1{
+				height: 300px;
+				line-height: 25px;
+				display: inline-block;
+			}
+			ul.submenu2 > li{
+				cursor: pointer;
+			}
+			ul.submenu2 > li:hover{
+				color: #4fc1f0;
+				padding-left: 10px;
+			}
+			div#footer-footer{
+				width: 100%;
+				height: 70px;
+				position: relative;
+				background: #14b1bb;
+				color: #fff;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 100;
+				font-family: sans-serif;
+				line-height: 70px;
+			}
+			div#footer-footer span:first-of-type{
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+			div#footer-footer span:last-of-type:hover{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			div#home-button{
+				width:50px;
+				height: 50px;
+				position: fixed;
+				right: 2%;
+				top: 87%;
+				background: #333;
+				z-index: 133;
+				cursor: pointer;
+			}
+			div#home-button-arrow{
+				width: 10px;
+				height: 10px;
+				position: relative;
+				margin: 20px auto;
+				border-top: 4px solid #fff;
+				border-right: 4px solid #fff;
+				transform: rotate(-45deg);
+			}
+			div#home-button:hover{
+				background: #696969;
+			}
+			div.clear{
+				clear:both;
+			}
+			a.underline{
+				text-decoration: none;
+			}
+			a.underline:visited{
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="motherfucker">
+			<div class="header">
+			</div>
+			<div class="header-fake">
+				<div id="header-logo"></div>
+				<ul class="header-wrapper">
+					<li>
+						<a class="underline" href="jobhelp.html">home</a>
+						<div class="header-submenu-container">
+							<div class="header-submenu-top"></div>
+							<ul class="header-submenu">
+								<li><p class="font1">Slider Style 1</p></li>
+								<li><p class="font1">Slider Style 2</p></li>
+								<li><p class="font1">Image Overlay Light</p></li>
+								<li><p class="font1">Image Overlay Dark</p></li>
+								<li><p class="font1">Background Image</p></li>
+								<li><p class="font1">Menu with Image 1</p></li>
+								<li><p class="font1">Menu with Image 2</p></li>
+								<li><p class="font1">Video Background</p></li>
+								<li><p class="font1">Fixed Background</p></li>
+								<li><p class="font1">Box Layout</p></li>
+							</ul>
+						</div>
+					</li>
+					<li id="submenu2-width">
+						job board
+						<div class="header-submenu-container">
+							<div class="header-submenu-top"></div>
+							<ul class="header-submenu">
+								<li class="border-top"><p class="font1">Single Job</p></li>
+								<li><p class="font1">Job Details</p></li>
+							</ul>
+						</div>
+					</li>
+					<li id="submenu3-width">
+						features
+						<div class="header-submenu-container">
+							<div class="header-submenu-top"></div>
+							<ul class="header-submenu">
+								<li class="border-top"><span class="w-span1"><p class="font1">Slider Style</p></span><span class="w-span2"><div></div></span>
+									<ul class="header-sub-submenu">
+										<li><p class="font2">Slider Style 1</p></li>
+										<li><p class="font2">Slider Style 2</p></li>
+										<li><p class="font2">Image Background</p></li>
+										<li><p class="font2">Video Background</p></li>
+										<li><p class="font2">Fixed Background</p></li>
+										<li><p class="font2">Text Animation 1</p></li>
+										<li><p class="font2">Text Animation 2</p></li>
+										<li><p class="font2">Text Animation 3</p></li>
+									</ul>
+								</li>
+								<li><span class="w-span1"><p class="font1">Menu Style</p></span><span class="w-span2"><div></div></span>
+									<ul class="header-sub-submenu">
+										<li><p class="font2">Default Menu</p></li>
+										<li><p class="font2">Menu with Top Bar</p></li>
+										<li><p class="font2">Menu Center</p></li>
+										<li><p class="font2">Menu Transparent</p></li>
+										<li><p class="font2">Menu White</p></li>
+										<li><p class="font2">Menu Border</p></li>
+										<li><p class="font2">Menu Sticky</p></li>
+										<li><p class="font2">Menu None Sticky</p></li>
+									</ul>
+								</li>
+								<li><span class="w-span1"><p class="font1">Page Style</p></span><span class="w-span2"><div></div></span>
+									<ul class="header-sub-submenu">
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+									</ul>
+								</li>
+								<li><span class="w-span1"><p class="font1">Footer Style</p></span><span class="w-span2"><div></div></span>
+									<ul class="header-sub-submenu">
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+										<li><p class="font2">aaaaa</p></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li id="submenu4-width">resume</li>
+					<li id="submenu5-width">shortcode</li>
+					<li id="submenu6-width">page
+						<div class="header-submenu-container">
+							<div class="header-submenu-top"></div>
+							<ul class="header-submenu">
+								<li class="border-top"><p class="font1">Job Board</p></li>
+								<li><p class="font1">Single Job</p></li>
+								<li><p class="font1">Job Details</p></li>
+								<li><p class="font1">Candidates</p></li>
+								<li><p class="font1">Resume</p></li>
+								<li><p class="font1">Blog Page</p></li>
+								<li><p class="font1">Blog Details</p></li>
+								<li><p class="font1">Login Page</p></li>
+								<li><a class="underline" href="login.html"><p class="font1">Login Page Two</p></a></li>
+								<li><p class="font1">Contact</p></li>
+							</ul>
+						</div>
+					</li>
+					<li id="submenu7-width">blog
+						<div class="header-submenu-container">
+							<div class="header-submenu-top"></div>
+							<ul class="header-submenu">
+								<li class="border-top"><p class="font1">Blog Details</p></li>
+							</ul>
+						</div>
+					</li>
+					<li id="submenu8-width">contact</li>
+					<li id="login-button">
+						<p>login</p>
+						<div id="login-cover"></div>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<div id="home-button">
+				<a href="#"><div id="home-button-arrow"></div></a>
+			</div>
+			<div id="content"></div>
+			<div id="content-map">
+				<div id="form">
+					<div class="form-label">Name</div>
+					<div><input type="text" class="form-input" placeholder="Please enter your name"></div>
+					<div class="form-label" id="form-label-2">Email</div>
+					<div><input type="text" class="form-input" id="form-input-2" placeholder="Please enter your email"></div>
+					<div class="form-label" id="form-label-3">Message</div>
+					<div><textarea class="form-input" id="form-input-3" placeholder="Please enter your message"></textarea></div>
+					<div id="submit">
+						<p>submit</p>
+						<div id="submit-cover"></div>
+					</div>
+				</div>
+			</div>
+			<div class="address-wrapper">
+				<div>
+					<div></div>
+					<div>
+						<p>info@example.com</p>
+						<p>info@example.com</p>
+					</div>
+				</div>
+				<div>
+					<div id="contact-address-2"></div>
+					<div>
+						<p>+012 345 678 102</p>
+						<p>+013 345 628 112</p>
+					</div>
+				</div>
+				<div>
+					<div id="contact-address-3"></div>
+					<div>
+						<p>House 09, Road 32, Mohammadpur,</p>
+						<p>Dhaka-1200, UK</p>
+					</div>
+				</div>
+			</div>
+			<div id="footer-header">
+				<div id="footer-header-1"></div>
+				<div class="footer-header-2">
+					<div></div>
+					<div id="fh2-2"></div>
+					<div id="fh2-3"></div>
+					<div id="fh2-4"></div>
+					<div id="fh2-5"></div>
+				</div>
+			</div>
+			<div class="footer-content">
+				<ul class="menu">
+					<li>
+						About Us 
+						<ul class="submenu">
+							<li id="submenu1">There are many vations of passages of Lorem Ipsumable, but the majority have suffered altetion in some form, by injected ur, or randomised words which don't look even slightly believable</li>
+						</ul>
+					</li>
+					<li>
+						GET IN TOUCH
+						<ul class="submenu">
+							<li>+012 345 678 102</li>
+							<li>info@example.com</li>
+							<li>www.example.com</li>
+							<li>ur address goes here,street.</li>
+						</ul>
+					</li>
+					<li id="menu3">
+						Helpful Links
+						<ul class="submenu submenu2">
+							<li>About Us</li>
+							<li>Support</li>
+							<li>Affiliate</li>
+							<li>Pricing</li>
+							<li>Terms & Conditions</li>
+							<li>Contact</li>
+						</ul>
+					</li>
+					<li id="menu4">
+						Trending Jobs
+						<ul class="submenu submenu2">
+							<li>Designer</li>
+							<li>Developer</li>
+							<li>iOS Developer</li>
+							<li>Designer</li>
+							<li>Developer</li>
+							<li>iOS Developer</li>
+						</ul>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<div id="footer-footer">Copyright&copy; <span>jobhelp</span> 2017. All rights reserved. Created by <span>Devitems</span></div>
+		</div>
+	</body>
+</html>
